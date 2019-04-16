@@ -1,0 +1,75 @@
+<!doctype html>
+<title>QUIZ</title>
+<link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css" />
+<!--<link rel="stylesheet" href="css/estilosInstrucciones.css" />-->
+<body>
+  <div style="margin: 0 auto; max-width: 800px; overflow: auto">
+<!--    <h3>Quiz</h3>-->
+
+    <div id="quiz">
+      <dl>
+
+        <dt><strong>Question 1:</strong></dt>
+        <dd>
+          <span id="rounds_result" class="quiz_result"></span>
+          <form name="rounds" id="rounds">
+	    <p class="question">What is the goal of the game?</p>
+	    <p>
+	      <input type="radio" name="rounds" value="5"> Decode your partner's classification.<br>
+	      <input type="radio" name="rounds" value="10"> Coincide with your partner's classification.<br>
+	      <input type="radio" name="rounds" value="15"> Correctly classify the dogs<br>
+	      <input type="radio" name="rounds" value="not"> It is not known in advance.
+	    </p>
+	  </form>
+        </dd>
+
+        <dt><strong>Question 2:</strong></dt>
+        <dd>
+          <span id="objetos_result" class="quiz_result"></span>
+          <form name="objetos" id="objetos">
+            <p class="question">How many rounds of training are there?</p>
+            <p>
+              <input type="radio" name="objetos" value="1"> It is not known in advance <br>
+              <input type="radio" name="objetos" value="2"> 5 <br>
+              <input type="radio" name="objetos" value="3"> 10 <br>
+              <input type="radio" name="objetos" value="4"> 20 <br>
+            </p>
+          </form>
+        </dd>
+        <dt><strong>Question 3:</strong></dt>
+        <dd>
+          <span id="puntos_result" class="quiz_result"></span>
+          <form name="puntos" id="puntos">
+            <p class="question">How many categories of dogs are in the rounds of game?</p>
+            <p>
+              <input type="radio" name="puntos" value="1"> 8 <br>
+              <input type="radio" name="puntos" value="2"> 4 <br>
+              <input type="radio" name="puntos" value="3"> 3 <br>
+              <input type="radio" name="puntos" value="4"> 2 <br>
+            </p>
+
+          </form>
+        </dd>
+
+	<dt><strong>Question 4:</strong></dt>
+        <dd>
+          <span id="umbral_result" class="quiz_result"></span>
+          <form name="umbral" id="umbral">
+            <p class="question">What is the time allotted to each type of round?</p>
+            <p>
+              <input type="radio" name="umbral" value="5"> 80 seconds for rounds of training and 60 seconds for rounds of game.<br>
+              <input type="radio" name="umbral" value="10"> 40 seconds for rounds of training and 40 seconds for rounds of game.<br>
+              <input type="radio" name="umbral" value="30"> 60 seconds for rounds of training and 20 seconds for rounds of game.<br>
+              <input type="radio" name="umbral" value="2"> 60 seconds for rounds of training and 80 seconds for rounds of game.<br>
+            </p>
+
+          </form>
+        </dd>
+      </dl>
+      <div id="done_box">
+        <button onclick='javascript:parent.node.emit("check-quiz");' id="submitQuiz"  class="btn btn-lg btn-primary">Press here to save your answers and proceed to the game.<br> Correct answers <span id="answers_counter">0 / 4</span></button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/quiz.js"></script>
