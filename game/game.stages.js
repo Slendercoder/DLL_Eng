@@ -37,9 +37,9 @@
 
      // Modify the stager to skip one stage.
      stager.skip('bienvenida');
-     // stager.skip('instructions');
-     // stager.skip('tutorial_training');
-     // stager.skip('tutorial_game');
+     stager.skip('instructions');
+     stager.skip('tutorial_training');
+     stager.skip('tutorial_game');
 
      //stager.skip('quiz');
 

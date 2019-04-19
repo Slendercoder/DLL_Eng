@@ -401,10 +401,10 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
                 var suposicion =  W.getElementById(aux).options[choiceIndex].value;
                 if(node.game.conteoInstrucciones == 1){
                 	node.game.idymensaje.push('A');
-                	W.setInnerHTML('inst', 'Good! During the game, you can send as many messages as you want, but your partner can decide whether to answer or ignore them. Try it again with another image!');
+                	W.setInnerHTML('inst', 'Good! During the game, you can send as many messages as you want, but your partner can decide whether to answer or ignore them. Try again with another image!');
                 }
                 if(node.game.conteoInstrucciones == 2){
-                  W.setInnerHTML('inst', 'Good! In a few seconds you will see the answer to your <i>first</i> message. A few seconds later, you will receive a message from your partner.<br> Unfold the Pending Messages list and click on the message that your partner sent you');
+                  W.setInnerHTML('inst', 'Good! In a few seconds you will see the answer to your <i>first</i> message. A few seconds later, you will receive a message from your partner.<br> Click on the Pending Messages list and choose the message that your partner has sent you.');
     	            if(node.game.idymensaje[0] == 'Perro1'){
 		                  W.setInnerHTML('confirm1', '<br> Yes, it is a ' + node.game.idymensaje[1]);
 		                  // alert('En este momento verá una notificación con la respuesta a la primera pregunta que hizo. Preste atención al primer perro que arrastró hasta el signo de interrogación');
@@ -472,15 +472,15 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
                 var suposicion =  W.getElementById(aux).options[choiceIndex].value;
                 if(node.game.conteoInstrucciones == 1){
                 	node.game.idymensaje.push('B');
-                	W.setInnerHTML('inst', 'Good! During the game, you can send as many messages as you want, but your partner can decide whether to answer or ignore them. Try it again with another image!');
+                	W.setInnerHTML('inst', 'Good! During the game, you can send as many messages as you want, but your partner can decide whether to answer or ignore them. Try again with another image!');
                 }
                 if(node.game.conteoInstrucciones == 2){
                 	node.game.idymensaje.push('B');
-                  W.setInnerHTML('inst', 'Good! In a few seconds you will see the answer to your <i>first</i> message. A few seconds later, you will receive a message from your partner.<br> Unfold the Pending Messages list and click on the message that your partner sent you');
+                  W.setInnerHTML('inst', 'Good! In a few seconds you will see the answer to your <i>first</i> message. A few seconds later, you will receive a message from your partner.<br> Click on the Pending Messages list and choose the message that your partner has sent you.');
                   if(node.game.idymensaje[0] == 'Perro1'){
 		                  W.setInnerHTML('confirm1', '<br> Yes, it is a ' + node.game.idymensaje[1]);
 		                  // alert('En este momento verá una notificación con la respuesta a la primera pregunta que hizo. Preste atención al primer perro que arrastró hasta el signo de interrogación');
-                      W.setInnerHTML('notif', '<br> Tiene un nuevo mensaje!');
+                      W.setInnerHTML('notif', '<br> You have a new message!');
 		                  node.emit('Muestra_Pop1');
                       var opt = document.createElement('option'); // Crea un item nuevo para la lista desplegable
                       opt.value = 'C'; // Objeto enviado
@@ -544,11 +544,11 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
                 var suposicion =  W.getElementById(aux).options[choiceIndex].value;
                 if(node.game.conteoInstrucciones == 1){
                 	node.game.idymensaje.push('C');
-                	W.setInnerHTML('inst', 'Good! During the game, you can send as many messages as you want, but your partner can decide whether to answer or ignore them. Try it again with another image!');
+                	W.setInnerHTML('inst', 'Good! During the game, you can send as many messages as you want, but your partner can decide whether to answer or ignore them. Try again with another image!');
                 }
                 if(node.game.conteoInstrucciones == 2){
                 	node.game.idymensaje.push('C');
-                  W.setInnerHTML('inst', 'Good! In a few seconds you will see the answer to your <i>first</i> message. A few seconds later, you will receive a message from your partner.<br> Unfold the Pending Messages list and click on the message that your partner sent you');
+                  W.setInnerHTML('inst', 'Good! In a few seconds you will see the answer to your <i>first</i> message. A few seconds later, you will receive a message from your partner.<br> Click on the Pending Messages list and choose the message that your partner has sent you.');
                   if(node.game.idymensaje[0] == 'Perro1'){
 		                  W.setInnerHTML('confirm1', '<br> Yes, it is a ' + node.game.idymensaje[1]);
   		                  // alert('En este momento verá una notificación con la respuesta a la primera pregunta que hizo. Preste atención al primer perro que arrastró hasta el signo de interrogación');
@@ -616,11 +616,11 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
                 var suposicion =  W.getElementById(aux).options[choiceIndex].value;
                 if(node.game.conteoInstrucciones == 1){
                 	node.game.idymensaje.push('D');
-                	W.setInnerHTML('inst', 'Good! During the game, you can send as many messages as you want, but your partner can decide whether to answer or ignore them. Try it again with another image!');
+                	W.setInnerHTML('inst', 'Good! During the game, you can send as many messages as you want, but your partner can decide whether to answer or ignore them. Try again with another image!');
                 }
                 if(node.game.conteoInstrucciones == 2){
                 	node.game.idymensaje.push('D');
-                  W.setInnerHTML('inst', 'Good! In a few seconds you will see the answer to your <i>first</i> message. A few seconds later, you will receive a message from your partner.<br> Unfold the Pending Messages list and click on the message that your partner sent you');
+                  W.setInnerHTML('inst', 'Good! In a few seconds you will see the answer to your <i>first</i> message. A few seconds later, you will receive a message from your partner.<br> Click on the Pending Messages list and choose the message that your partner has sent you.');
                   if(node.game.idymensaje[0] == 'Perro1'){
 		                  W.setInnerHTML('confirm1', '<br> Yes, it is a ' + node.game.idymensaje[1]);
 		                  // alert('En este momento verá una notificación con la respuesta a la primera pregunta que hizo. Preste atención al primer perro que arrastró hasta el signo de interrogación');

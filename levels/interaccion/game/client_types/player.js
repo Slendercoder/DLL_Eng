@@ -220,7 +220,7 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
             var selectPerro3 = W.getElementById('select3');
             var selectPerro4 = W.getElementById('select4');
             var selectPerro5 = W.getElementById('select5');
-            selectMensajes.options[0].text = "Tiene " + node.game.contadorMensajes + " mensajes";
+            selectMensajes.options[0].text = "You have " + node.game.contadorMensajes + " messages";
 
             var otroJugador = MESSAGE[0];
             var perros = MESSAGE[1];
@@ -441,7 +441,7 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
 
             node.on.data('Comunicacion', function(msg) {
               node.emit('Muestra_Popup');
-              W.setInnerHTML('notif', "<br> ¡TIENE UNA SOLICITUD NUEVA!");
+              W.setInnerHTML('notif', "<br> YOU HAVE A NEW MESSAGE!");
 
               // Agrega el mensaje a la lista
               var opt = document.createElement('option'); // Crea un item nuevo para la lista desplegable
@@ -455,7 +455,7 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
               selectMensajes.appendChild(opt); // Introduce nuevo item en la lista desplegable
               node.game.contadorComunicacionMensajes += 1;
               node.game.contadorMensajes += 1;
-              selectMensajes.options[0].text = "Tiene " + node.game.contadorMensajes + " solicitudes sin leer";
+              selectMensajes.options[0].text = "You have " + node.game.contadorMensajes + " unread messages";
             }); // End node.on.data('Comunicacion'
 
                           // ABRIR SOLICITUDES
@@ -477,7 +477,7 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
 	              node.say('Popup', otroJugador, [idRecibido, correo]);
 	              this.remove(this.selectedIndex); // Elimina item de la lista desplegable
 	              node.game.contadorMensajes -= 1;
-	              selectMensajes.options[0].text = "Tiene " + node.game.contadorMensajes + " mensajes";
+	              selectMensajes.options[0].text = "You have " + node.game.contadorMensajes + " messages";
 	              W.getElementById('solicitudAbierta').style.display = 'block'; // Abre ventana de responder
 	              W.setInnerHTML('Solicitud', correo); // Muestra lo que dice el mensaje
 	              // console.log('CONTADOR RONDA: ', node.game.contadorMensajesRonda);
@@ -508,61 +508,61 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
             node.on.data('Respuesta', function(msg){
               if(msg.data[1] == 'Perro1'){
                 if(msg.data[0] == 'Correcto'){
-                  W.setInnerHTML('confirm1', '<br> SI es ');
+                  W.setInnerHTML('confirm1', '<br> YES, it is ');
                   node.emit('Muestra_Pop1');
                 } else if (msg.data[0] == 'Incorrecto'){
-                  W.setInnerHTML('confirm1', '<br> NO es ');
+                  W.setInnerHTML('confirm1', '<br> NO, it is not a ');
                   node.emit('Muestra_Pop1');
                 } else{
-                  W.setInnerHTML('confirm1', '<br> No sé si es ');
+                  W.setInnerHTML('confirm1', '<br> I don\'t know if it is ');
                   node.emit('Muestra_Pop1');
                 }
               }
               if(msg.data[1] == 'Perro2'){
                 if(msg.data[0] == 'Correcto'){
-                  W.setInnerHTML('confirm2', '<br> SI es ');
+                  W.setInnerHTML('confirm2', '<br> YES, it is ');
                   node.emit('Muestra_Pop2');
                 } else if (msg.data[0] == 'Incorrecto'){
-                  W.setInnerHTML('confirm2', '<br> NO es ');
+                  W.setInnerHTML('confirm2', '<br> NO, it is not a ');
                   node.emit('Muestra_Pop2');
                 } else{
-                  W.setInnerHTML('confirm2', '<br> No sé si es ');
+                  W.setInnerHTML('confirm2', '<br> I don\'t know if it is ');
                   node.emit('Muestra_Pop2');
                 }
               }
               if(msg.data[1] == 'Perro3'){
                 if(msg.data[0] == 'Correcto'){
-                  W.setInnerHTML('confirm3', '<br> SI es ');
+                  W.setInnerHTML('confirm3', '<br> YES, it is ');
                   node.emit('Muestra_Pop3');
                 } else if (msg.data[0] == 'Incorrecto'){
-                  W.setInnerHTML('confirm3', '<br> NO es ');
+                  W.setInnerHTML('confirm3', '<br> NO, it is not a ');
                   node.emit('Muestra_Pop3');
                 } else{
-                  W.setInnerHTML('confirm3', '<br> No sé si es ');
+                  W.setInnerHTML('confirm3', '<br> I don\'t know if it is ');
                   node.emit('Muestra_Pop3');
                 }
               }
               if(msg.data[1] == 'Perro4'){
                 if(msg.data[0] == 'Correcto'){
-                  W.setInnerHTML('confirm4', '<br> SI es ');
+                  W.setInnerHTML('confirm4', '<br> YES, it is ');
                   node.emit('Muestra_Pop4');
                 } else if (msg.data[0] == 'Incorrecto'){
-                  W.setInnerHTML('confirm4', '<br> NO es ');
+                  W.setInnerHTML('confirm4', '<br> NO, it is not a ');
                   node.emit('Muestra_Pop4');
                 } else{
-                  W.setInnerHTML('confirm4', '<br> No sé si es ');
+                  W.setInnerHTML('confirm4', '<br> I don\'t know if it is ');
                   node.emit('Muestra_Pop4');
                 }
               }
               if(msg.data[1] == 'Perro5'){
                 if(msg.data[0] == 'Correcto'){
-                  W.setInnerHTML('confirm5', '<br> SI es ');
+                  W.setInnerHTML('confirm5', '<br> YES, it is ');
                   node.emit('Muestra_Pop5');
                 } else if (msg.data[0] == 'Incorrecto'){
-                  W.setInnerHTML('confirm5', '<br> NO es ');
+                  W.setInnerHTML('confirm5', '<br> NO, it is not a ');
                   node.emit('Muestra_Pop5');
                 } else{
-                  W.setInnerHTML('confirm5', '<br> No sé si es ');
+                  W.setInnerHTML('confirm5', '<br> I don\'t know if it is ');
                   node.emit('Muestra_Pop5');
                 }
               }
@@ -598,11 +598,11 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
           if(node.game.check[i-1] == 1){
             console.log('right' + i);
             W.getElementById('right' + i).style.display = "block";
-            W.setInnerHTML('resultado' + i, 'Acertó!');
+            W.setInnerHTML('resultado' + i, 'Correct!');
           } else {
             console.log('wrong' + i);
             W.getElementById('wrong' + i).style.display = "block";
-            W.setInnerHTML('resultado' + i, 'Falló!');
+            W.setInnerHTML('resultado' + i, 'Incorrect!');
           }
         }
         var continuar = W.getElementById('continuar');
@@ -623,12 +623,12 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
                 forms: [
                     w.get('ChoiceTable', {
                         id: 'gender',
-                        mainText: '¿Cuál es su género?',
+                        mainText: 'What is your gender?',
                         choices: [
-                            'Masculino',
-                            'Femenino',
-                            'Otro',
-                            'Prefiero no decirlo'
+                            'Male',
+                            'Female',
+                            'Other',
+                            'I prefer not to say it'
                         ],
                         shuffleChoices: false,
                         title: false,
@@ -636,7 +636,7 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
                     }),
                     w.get('ChoiceTable', {
                         id: 'age',
-                        mainText: '¿Cuál es su grupo de edad?',
+                        mainText: 'What is your age group?',
                         choices: [
                             '18-20',
                             '21-30',
@@ -645,7 +645,7 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
                             '51-60',
                             '61-70',
                             '71+',
-                            'Prefiero no decirlo'
+                            'I prefer not to say it'
                         ],
                         shuffleChoices: false,
                         title: false,
@@ -653,16 +653,16 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
                     }),
                     w.get('ChoiceTable', {
                         id: 'carreer',
-                        mainText: 'Seleccione su unidad académica (si es de doble programa, escoja solo la unidad académica de su programa base):',
+                        mainText: 'Choose your carreer:',
                         choices: [
-                            'Facultad de Ciencias Naturales y Matemáticas',
-                            'Escuela de Medicina Ciencias de la Salud',
-                            'Escuela de Ciencias Humanas',
-                            'Escuela de Administración',
-                            'Facultad de Ciencia Política, Gobierno y Relaciones Internacionales',
-                            'Facultad de Economía',
-                            'Facultad de Jurisprudencia',
-                            'Prefiero no decirlo'
+                            'Natural Sciences or Mathematics',
+                            'Medicine',
+                            'Social Sciences',
+                            'Busines Administration',
+                            'Political Sciences',
+                            'Economy',
+                            'Law',
+                            'I prefer no to say it'
                         ],
                         shuffleChoices: false,
                         title: false,
@@ -677,12 +677,12 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
                       forms: [
                           w.get('ChoiceTable', {
                               id: 'strategy',
-                              mainText: 'Durante el juego,',
+                              mainText: 'During the game,',
                               choices: [
-                                  'me basé totalmente en la clasificación de mi compañero',
-                                  'apendí a clasificar algunos perros y confié en mi compañero para clasificar otros',
-                                  'aprendía clasificar todos los perros',
-                                  'Prefiero no decirlo'
+                                  'I completely based my choices on my partner\'s answers',
+                                  'I learned to classify some dogs and trusted in my partner\'s choices for other dogs',
+                                  'I learned to classify all dogs',
+                                  'I prefer no to say it'
                               ],
                               shuffleChoices: false,
                               title: false,
@@ -690,13 +690,13 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
                             }),
                             w.get('ChoiceTable', {
                                 id: 'messages',
-                                mainText: 'Hacia el final del juego, pregunté sobre la(s) categoría(s) (puede escoger varias opciones):',
+                                mainText: 'During the rounds of game, I asked about the categories:',
                                 choices: [
                                     'A',
                                     'B',
                                     'C',
                                     'D',
-                                    'Prefiero no decirlo'
+                                    'I prefer not to say it'
                                 ],
                                 selectMultiple: true,
                                 shuffleChoices: false,
@@ -705,13 +705,13 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
                               }),
                             w.get('ChoiceTable', {
                                 id: 'recognition',
-                                mainText: 'Al finalizar el juego podía reconocer los perros de las categorías (puede escoger varias opciones):',
+                                mainText: 'At the end of the game I could recognize the dogs in categories:',
                                 choices: [
                                     'A',
                                     'B',
                                     'C',
                                     'D',
-                                    'Prefiero no decirlo'
+                                    'I prefer not to say it'
                                 ],
                                 selectMultiple: true,
                                 shuffleChoices: false,
